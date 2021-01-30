@@ -20,14 +20,23 @@ $(document).ready(function () {
         }).then(function (responseOne) {
             console.log(responseOne)
 
-
-
-
-
-
-
+            let name = repsonse.name;
+            let brewType = repsonse.brewery_type;
+            let zip = response.postal_code;
+            let city = response.city;
+            let state = response.state;
+            let phone = response.phone;
+            let website = repsonse.website_url;
             const lat = response.latitude;
             const long = response.longitude;
+            
+            let brewCard = $(".pubList")
+
+
+
+
+
+
             const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
             const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?key=${mapQKey}&center=${lat},${long}`;
 
