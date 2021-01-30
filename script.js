@@ -10,7 +10,7 @@ $.ajax({
     const lat = response.latitude;
     const long = response.longitude;
     const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
-    const mapQuest = "https://www.mapquestapi.com/staticmap/v5/map?key=" + mapQKey + "&center=" + lat + "," + long;
+    const mapQuest = "https://www.mapquestapi.com/staticmap/v5/map?key=" + mapQKey + "&center=" + lat + "," + long + "&zoom=15";
     
     $.ajax({
     url: mapQuest,
