@@ -20,15 +20,15 @@ $(document).ready(function () {
         }).then(function (responseOne) {
             console.log(responseOne)
 
-            // let name = responseOne.name;
-            // let brewType = responseOne.brewery_type;
-            // let zip = responseOne.postal_code;
-            // let city = responseOne.city;
-            // let state = responseOne.state;
-            // let phone = responseOne.phone;
-            // let website = responseOne.website_url;
-            // const lat = responseOne.latitude;
-            // const long = responseOne.longitude;
+            let name = responseOne.name;
+            let brewType = responseOne.brewery_type;
+            let zip = responseOne.postal_code;
+            let city = responseOne.city;
+            let state = responseOne.state;
+            let phone = responseOne.phone;
+            let website = responseOne.website_url;
+            const lat = responseOne.latitude;
+            const long = responseOne.longitude;
 
             let brewCard = $(".pubList").append("div").addClass("card-body");
             brewCard.empty();
