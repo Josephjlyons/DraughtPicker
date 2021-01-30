@@ -20,17 +20,34 @@ $(document).ready(function () {
         }).then(function (responseOne) {
             console.log(responseOne)
 
-            let name = responseOne[0].name;
-            let brewType = responseOne[0].brewery_type;
-            let zip = responseOne[0].postal_code;
-            let city = responseOne[0].city;
-            let state = responseOne[0].state;
-            let phone = responseOne[0].phone;
-            let website = responseOne[0].website_url;
-            const lat = responseOne[0].latitude;
-            const long = responseOne[0].longitude;
-            
-            let brewCard = $(".pubList");
+            let name = responseOne.name;
+            let brewType = responseOne.brewery_type;
+            let zip = responseOne.postal_code;
+            let city = responseOne.city;
+            let state = responseOne.state;
+            let phone = responseOne.phone;
+            let website = responseOne.website_url;
+            const lat = responseOne.latitude;
+            const long = responseOne.longitude;
+
+            let brewCard = $(".pubList").append("div").addClass("card-body");
+            brewCard.empty();
+            let breweryInfo = brewCard.append("<p>");
+            brewCard.append(breweryInfo);
+
+            let currentBrew = breweryInfo.append("<p>")
+            currentBrew.append(currentBrew);
+
+            currentBrew.append(`<p>Name: ${responseOne[0].name} </p>`);
+            currentBrew.append(`<p>Brewery Type: ${responseOne[0].brewery_type} </p>`);
+            currentBrew.append(`<p>City: ${responseOne[0].city} </p>`);
+            currentBrew.append(`<p>State: ${responseOne[0].state} </p>`);
+            currentBrew.append(`<p>Phone: ${responseOne[0].phone} </p>`);
+            currentBrew.append(`<p>Website: ${responseOne[0].website_url} </p>`);
+
+
+
+
 
 
 
