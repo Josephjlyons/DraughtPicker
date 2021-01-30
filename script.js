@@ -3,12 +3,12 @@ $(document).ready(function () {
 
     // Variable For User Input 
 
-    let zipCode = $("#search-bar").val();
-    let searchBtn = $("#searchBtn");
-
+    
     searchBtn.click(function () {
-
-
+        
+        let zipCode = $("#search-bar").val();
+        let searchBtn = $("#searchBtn");
+        
         console.log(zipCode);
         // Variable APIs From OpenBreweryDB 
         let brewZip = `https://api.openbrewerydb.org/breweries?by_postal=${zipCode}`;
