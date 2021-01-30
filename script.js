@@ -9,7 +9,7 @@ $(document).ready(function () {
     searchBtn.click(function () {
 
 
-
+        console.log(zipCode);
         // Variable APIs From OpenBreweryDB 
         let brewZip = `https://api.openbrewerydb.org/breweries?by_postal=${zipCode}`;
 
@@ -20,34 +20,31 @@ $(document).ready(function () {
         }).then(function (responseOne) {
             console.log(responseOne)
 
-            let name = repsonse.name;
-            let brewType = repsonse.brewery_type;
-            let zip = response.postal_code;
-            let city = response.city;
-            let state = response.state;
-            let phone = response.phone;
-            let website = repsonse.website_url;
-            const lat = response.latitude;
-            const long = response.longitude;
+            let name = responseOne[0].name;
+            let brewType = responseOne[0].brewery_type;
+            let zip = responseOne[0].postal_code;
+            let city = responseOne[0].city;
+            let state = responseOne[0].state;
+            let phone = responseOne[0].phone;
+            let website = responseOne[0].website_url;
+            const lat = responseOne[0].latitude;
+            const long = responseOne[0].longitude;
             
-            let brewCard = $(".pubList")
-
-
-
+            let brewCard = $(".pubList");
 
 
 
             const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
-            const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?key=${mapQKey}&center=${lat},${long}`;
+            // const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?key=${mapQKey}&center=${lat},${long}`;
+
+            const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}`
 
             $.ajax({
                 url: mapQuest,
                 method: "GET"
             }).then(function (responseTwo) {
 
-                console.log(responseTwo);
-
-
+                console.log('reached here');
             });
         });
     })
