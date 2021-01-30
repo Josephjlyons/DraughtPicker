@@ -3,12 +3,12 @@ $(document).ready(function () {
 
     // Variable For User Input 
 
-    let zipCode = $("#search-bar").val();
+
     let searchBtn = $("#searchBtn");
 
     searchBtn.click(function () {
 
-
+        let zipCode = $("#search-bar").val();
 
         // Variable APIs From OpenBreweryDB 
         let brewZip = `https://api.openbrewerydb.org/breweries?by_postal=${zipCode}`;
@@ -20,17 +20,31 @@ $(document).ready(function () {
         }).then(function (responseOne) {
             console.log(responseOne)
 
-            let name = repsonse.name;
-            let brewType = repsonse.brewery_type;
-            let zip = response.postal_code;
-            let city = response.city;
-            let state = response.state;
-            let phone = response.phone;
-            let website = repsonse.website_url;
-            const lat = response.latitude;
-            const long = response.longitude;
-            
-            let brewCard = $(".pubList")
+            // let name = responseOne.name;
+            // let brewType = responseOne.brewery_type;
+            // let zip = responseOne.postal_code;
+            // let city = responseOne.city;
+            // let state = responseOne.state;
+            // let phone = responseOne.phone;
+            // let website = responseOne.website_url;
+            // const lat = responseOne.latitude;
+            // const long = responseOne.longitude;
+
+            let brewCard = $(".pubList").append("div").addClass("card-body");
+            brewCard.empty();
+            let breweryInfo = brewCard.append("<p>");
+            brewCard.append(breweryInfo);
+
+            let currentBrew = breweryInfo.append("<p>")
+            currentBrew.append(currentBrew);
+
+            currentBrew.append(`<p>Name: ${responseOne[0].name} </p>`);
+            currentBrew.append(`<p>Brewery Type: ${responseOne[0].brewery_type} </p>`);
+            currentBrew.append(`<p>City: ${responseOne[0].city} </p>`);
+            currentBrew.append(`<p>State: ${responseOne[0].state} </p>`);
+            currentBrew.append(`<p>Phone: ${responseOne[0].phone} </p>`);
+            currentBrew.append(`<p>Website: ${responseOne[0].website_url} </p>`);
+
 
 
 
