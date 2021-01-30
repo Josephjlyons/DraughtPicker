@@ -7,6 +7,8 @@ $.ajax({
     
     console.log(response);
     
+    const city = response.city;
+    const state = response.state;
     const lat = response.latitude;
     const long = response.longitude;
     const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
