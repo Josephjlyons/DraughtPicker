@@ -26,15 +26,16 @@ $(document).ready(function () {
             }
             streetNumb = address.substr(0, index);
             streetName = address.substr((index + 1));
-        }
+        };
 
-        
+
+
 
         $.ajax({
             url: brewZip,
             method: "GET"
         }).then(function (responseOne) {
-            console.log(responseOne)
+            // console.log(responseOne)
 
             let name = responseOne.name;
             let brewType = responseOne.brewery_type;
@@ -47,25 +48,28 @@ $(document).ready(function () {
             const long = responseOne[0].longitude;
             const street = responseOne[0].street;
 
-            let brewCard = $(".pubList").append("div").addClass("card-body");
-            brewCard.empty();
-            let breweryInfo = brewCard.append("<p>");
-            brewCard.append(breweryInfo);
 
-            let currentBrew = breweryInfo.append("<p>")
-            currentBrew.append(currentBrew);
-
-            currentBrew.append(`<p>Name: ${responseOne[0].name} </p>`);
-            currentBrew.append(`<p>Brewery Type: ${responseOne[0].brewery_type} </p>`);
-            currentBrew.append(`<p>City: ${responseOne[0].city} </p>`);
-            currentBrew.append(`<p>State: ${responseOne[0].state} </p>`);
-            currentBrew.append(`<p>Phone: ${responseOne[0].phone} </p>`);
-            currentBrew.append(`<p>Website: <a href="${responseOne[0].website_url}"> ${responseOne[0].website_url} </a></p>`);
 
             sepAddress(street);
 
 
+            function populateCarousel(data) {
+                let carousel = $(".carousel")
+                carousel.empty();
+                
+              console.log(data);
+                for (let i = 0; i < data.length; i++) {
+                    carousel.append(`<p>Name: ${data[i].name} </p>`);
+                    carousel.append(`<p>Brewery Type: ${data[i].brewery_type} </p>`);
+                    carousel.append(`<p>City: ${data[i].city} </p>`);
+                    carousel.append(`<p>State: ${data[i].state} </p>`);
+                    carousel.append(`<p>Phone: ${data[i].phone} </p>`);
+                    carousel.append(`<p>Website: <a href="${data[i].website_url}"> ${data[i].website_url} </a></p>`);
 
+                }
+            }
+
+            populateCarousel(responseOne);
 
 
             const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
