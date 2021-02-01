@@ -4,30 +4,31 @@ $(document).ready(function () {
     // Variable For User Input 
 
     let searchBtn = $("#searchBtn");
-    
+
     searchBtn.click(function () {
-        
+
         let zipCode = $("#search-bar").val();
         let streetNumb = "";
         let streetName = "";
-        
-        
+
+
         console.log(zipCode);
         // Variable APIs From OpenBreweryDB 
         let brewZip = `https://api.openbrewerydb.org/breweries?by_postal=${zipCode}`;
 
         //This function breaks the string street into two separate strings streetNumb and streetName
-        let sepAddress = function(address){
-            let index = 0; 
-            for (let i = 0; i < address.length; i++){
-                if (address.charAt(i) === " "){
+        let sepAddress = function (address) {
+            let index = 0;
+            for (let i = 0; i < address.length; i++) {
+                if (address.charAt(i) === " ") {
                     index = i;
                 }
             }
             streetNumb = address.substr(0, index);
-            streetName = address.substr((index+1));
+            streetName = address.substr((index + 1));
         }
 
+        
 
         $.ajax({
             url: brewZip,
@@ -59,17 +60,16 @@ $(document).ready(function () {
             currentBrew.append(`<p>City: ${responseOne[0].city} </p>`);
             currentBrew.append(`<p>State: ${responseOne[0].state} </p>`);
             currentBrew.append(`<p>Phone: ${responseOne[0].phone} </p>`);
-            currentBrew.append(`<p>Website: ${responseOne[0].website_url} </p>`);
+            currentBrew.append(`<p>Website: <a href="${responseOne[0].website_url}"> ${responseOne[0].website_url} </a></p>`);
 
             sepAddress(street);
 
 
-           
 
- 
+
 
             const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
-            
+
 
             const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&banner=${streetNumb}+${streetName}`;
             $("img.map").attr("src", mapQuest);
