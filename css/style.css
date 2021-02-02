@@ -4,6 +4,15 @@
     box-sizing: border-box;
   }
 
+  h1 {
+    font-family: 'Lobster','Pacifico', 'Rye', cursive;
+    font-size:72px;
+    -webkit-text-stroke:1px #26A69A;;
+    -webkit-text-fill-color:black;
+    margin-top: 50px;
+  }
+
+
   img.background {
     position: absolute;
     z-index: -1;
@@ -22,4 +31,53 @@
     top: 0px;
     right: 0px;
     height: 100%;
+  }
+  
+  
+  #search-bar {
+    background-color: white;
+    color:black;
+    padding:2px 2px 2px 20px;
+    height: 4rem;
+  }
+
+  
+  #searchBtn {
+    padding-left:20px;
+    padding-right: 20px;
+    height:45px;
+    font-size:18px
+  }
+
+  div.carousel-inner > div > div{
+    padding-left: 40px;
+    padding-top:16px;
+    position: relative;
+    top:20px;
+  }
+
+  div.carousel-inner > div > div > p {
+    font-size: 18px;
+    font-weight:bold;
+    -webkit-text-stroke:1px #26A69A;;
+    -webkit-text-fill-color:black;
+  }
+
+  h3 {
+    color: black;
+    font-size: 14px;
+    position:relative;
+    left:322px;
+    top:-15px;
+    font-weight: 600;
+  }
+
+  div.pubList {
+    margin-top:100px;
+  }
+
+  form{
+    Position: relative;
+    left:16px;
+    margin-top:50px;
   }
