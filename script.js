@@ -35,13 +35,13 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (responseOne) {
 
-            console.log(responseOne[0].latitude)
-            console.log(responseOne[0].longitude)
             function populateCarousel(data) {
-                // carousel.empty();
 
                 let $carouselInnerEl = $(".carousel-inner")
                 let $carouselindicatorsEL = $(".carousel-indicators")
+
+                $carouselindicatorsEL.empty();
+                $carouselInnerEl.empty();
                 for (let i = 0; i < data.length; i++) {
                     let state = responseOne[i].state;
                     const lat = responseOne[i].latitude;
@@ -58,7 +58,7 @@ $(document).ready(function () {
                             <p>Street Address: ${data[i].street}</p><br><br>
                             <p>Phone: ${data[i].phone}</p><br><br>
                             <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br><br>
-                            <img class="map" src="${mapQuest}" alt="This is a map of ${data[i].name} location">
+                            // <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/brewery-picture.jpg" : mapQuest}" alt="This is a map of ${data[i].name} location">
                         `)
                     divItemEL.append(brewDataEL)
                     $carouselindicatorsEL.append(ilEL)
