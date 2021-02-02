@@ -48,18 +48,21 @@ $(document).ready(function () {
                     const long = responseOne[i].longitude;
                     const street = responseOne[i].street;
                     sepAddress(street);
-                    const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&banner=${streetNumb}+${streetName}`;
+                    const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&defaultMarker=marker-26A69A&banner=${streetNumb}+${streetName}|26A69A`;
                     let ilEL = $(`<li data-target="#myCarousel" data-slide-to="${i}" class="${i === 0 ? "active" : ""}"></li>`)
                     let divItemEL = $(`<div class="item ${i === 0 ? "active" : ""}"></div`)
                     let brewDataEL = $(`
-                            <p>Name: ${data[i].name}</p><br><br>
-                            <p>Brewery Type: ${data[i].brewery_type}</p><br><br>
-                            <p>City: ${data[i].city}</p><br><br>
-                            <p>Street Address: ${data[i].street}</p><br><br>
-                            <p>Phone: ${data[i].phone}</p><br><br>
-                            <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br><br>
-                            // <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/brewery-picture.jpg" : mapQuest}" alt="This is a map of ${data[i].name} location">
+                            <div>
+                            <p>Name: ${data[i].name}</p><br>
+                            <p>Brewery Type: ${data[i].brewery_type}</p><br>
+                            <p>City: ${data[i].city}</p><br>
+                            <p>Street Address: ${data[i].street}</p><br>
+                            <p>Phone: ${data[i].phone}</p><br>
+                            <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br>
+                            </div>
+                            // <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/brewery-picture.jpg" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                         `)
+
                     divItemEL.append(brewDataEL)
                     $carouselindicatorsEL.append(ilEL)
                     $carouselInnerEl.append(divItemEL)
