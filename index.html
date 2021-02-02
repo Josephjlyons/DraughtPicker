@@ -10,6 +10,8 @@
     <title>Road To Beer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -23,21 +25,32 @@
         <div>
             <h3>Please enter your zip code</h3>
             <form class="row">
-                <input type="text" min="6" max="6" id="search-bar" type="number" class="form-control col s7 input-field"
+                <input type="text" minlength="5" maxlength="5" id="search-bar" type="number" class="form-control col s7 input-field"
                     placeholder="123456">
-                <button type="button" id="searchBtn" class="col s4 waves-effect waves-light btn-large">Search</button>
+                <button type="button" id="searchBtn" class="col s3 waves-effect waves-light btn-large offset-s1">Search</button>
             </form>
 
         </div>
         <div class="pubList">
-            <div class="carousel">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators"></ol>
+                <div class="carousel-inner" role="listbox">
 
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" data-interval="false">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" data-interval="false">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
 
             </div>
         </div>
 
 
-        <img class="map" src="//:0" alt="">
+        <!-- <img class="map" src="//:0" alt=""> -->
 
     </main>
     <script src="script.js"></script>
