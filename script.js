@@ -55,17 +55,26 @@ $(document).ready(function () {
 
             function populateCarousel(data) {
                 let carousel = $(".carousel")
-                carousel.empty();
-                
-              console.log(data);
-                for (let i = 0; i < data.length; i++) {
-                    carousel.append(`<p>Name: ${data[i].name} </p>`);
-                    carousel.append(`<p>Brewery Type: ${data[i].brewery_type} </p>`);
-                    carousel.append(`<p>City: ${data[i].city} </p>`);
-                    carousel.append(`<p>State: ${data[i].state} </p>`);
-                    carousel.append(`<p>Phone: ${data[i].phone} </p>`);
-                    carousel.append(`<p>Website: <a href="${data[i].website_url}"> ${data[i].website_url} </a></p>`);
+                // carousel.empty();
 
+                let $carouselInnerEl = $(".carousel-inner")
+                let $carouselindicatorsEL = $(".carousel-indicators")
+                //   console.log(data);
+                for (let i = 0; i < data.length; i++) {
+                        let ilEL = $(`<li data-target="#myCarousel" data-slide-to="${i}" class="${i === 0? "active": ""}"></li>`)
+                        let divItemEL = $(`<div class="item ${i === 0? "active": ""}"></div`)
+                        let brewDataEL = $(`
+                            <p>Name: ${data[i].name}</p><br><br>
+                            <p>Brewery Type: ${data[i].brewery_type}</p><br><br>
+                            <p>City: ${data[i].city}</p><br><br>
+                            <p>Street Address: ${data[i].street}</p><br><br>
+                            <p>Phone: ${data[i].phone}</p><br><br>
+                            <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br><br>
+                            <img class="map" src="//:0" alt="">
+                        `)
+                        divItemEL.append(brewDataEL)
+                        $carouselindicatorsEL.append(ilEL)
+                        $carouselInnerEl.append(divItemEL)
                 }
             }
 
