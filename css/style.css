@@ -12,6 +12,11 @@
     margin-top: 50px;
   }
 
+  test {
+    height: 100px;
+    width: 100px;
+    background-color: antiquewhite;
+  }
 
   img.background {
     position: absolute;
@@ -37,15 +42,18 @@
   #search-bar {
     background-color: white;
     color:black;
-    padding:2px 2px 2px 20px;
+    /* padding:2px 2px 2px 20px; */
     height: 4rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 9px;
   }
 
   
   #searchBtn {
-    padding-left:20px;
-    padding-right: 20px;
-    height:45px;
+    /* padding-left:20px;
+    padding-right: 20px; */
+    height:40px;
     font-size:18px
   }
 
