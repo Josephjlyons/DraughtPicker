@@ -44,6 +44,7 @@ $(document).ready(function () {
 
                 $carouselindicatorsEL.empty();
                 $carouselInnerEl.empty();
+                // talk to long about this ugly thing
                 for (let i = 0; i < data.length; i++) {
                     let state = responseOne[i].state;
                     const lat = responseOne[i].latitude;

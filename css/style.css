@@ -43,16 +43,19 @@
   #search-bar {
     background-color: white;
     color:black;
-    padding:2px 2px 2px 20px;
+    /* padding:2px 2px 2px 20px; */
     height: 4rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 9px;
   }
 
   /*  Search Button Formatting */
 
   #searchBtn {
-    padding-left:20px;
-    padding-right: 20px;
-    height:45px;
+    /* padding-left:20px;
+    padding-right: 20px; */
+    height:40px;
     font-size:18px
   }
 
