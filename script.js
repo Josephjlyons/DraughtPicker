@@ -5,6 +5,7 @@ $(document).ready(function () {
 
     let searchBtn = $("#searchBtn");
     const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
+    let faArr = [];
 
     // Search button that controls zip code fetch from OpenbreweryDB 
 
@@ -40,7 +41,6 @@ $(document).ready(function () {
             function populateCarousel(data) {
 
                 let $carouselInnerEl = $(".carousel-inner")
-                let $carouselindicatorsEL = $(".carousel-indicators")
 
                 $carouselindicatorsEL.empty();
                 $carouselInnerEl.empty();
@@ -52,7 +52,6 @@ $(document).ready(function () {
                     const street = responseOne[i].street;
                     sepAddress(street);
                     const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&defaultMarker=marker-26A69A&banner=${streetNumb}+${streetName}|26A69A`;
-                    let ilEL = $(`<li data-target="#myCarousel" data-slide-to="${i}" class="${i === 0 ? "active" : ""}"></li>`)
                     let divItemEL = $(`<div class="item ${i === 0 ? "active" : ""}"></div`)
                     let brewDataEL = $(`
                             <div>
@@ -70,7 +69,6 @@ $(document).ready(function () {
 
 
                     divItemEL.append(brewDataEL)
-                    $carouselindicatorsEL.append(ilEL)
                     $carouselInnerEl.append(divItemEL)
                 }
             }
