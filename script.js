@@ -56,15 +56,18 @@ $(document).ready(function () {
                     let divItemEL = $(`<div class="item ${i === 0 ? "active" : ""}"></div`)
                     let brewDataEL = $(`
                             <div>
-                            <p>Name: ${data[i].name}</p><br>
+                            <p>Name: ${data[i].name}</p> <br>
                             <p>Brewery Type: ${data[i].brewery_type} </p><br>
                             <p>City: ${data[i].city}</p><br>
                             <p>Street Address: ${data[i].street}</p><br>
                             <p>Phone: ${data[i].phone}</p><br>
                             <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br>
+                           
+                            
                             </div>
-                            // <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/brewery-picture.jpg" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
-                        `)
+                            <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/brewery-picture.jpg" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
+                            `)
+
 
                     divItemEL.append(brewDataEL)
                     $carouselindicatorsEL.append(ilEL)
@@ -76,10 +79,8 @@ $(document).ready(function () {
 
         });
     })
-    
 
-    document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.carousel');
-        var instances = M.Carousel.init(elems, options);
-    });
-})
+
+
+});
+
