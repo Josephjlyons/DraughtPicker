@@ -1,10 +1,12 @@
 $(document).ready(function () {
 
 
-    // Variable For User Input 
+    // Variables For User Input 
 
     let searchBtn = $("#searchBtn");
     const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
+
+    // Search button that controls zip code fetch from OpenbreweryDB 
 
     searchBtn.click(function () {
 
@@ -28,7 +30,7 @@ $(document).ready(function () {
         };
 
 
-
+        // API call to populate carousel with data entries 
 
         $.ajax({
             url: brewZip,
@@ -54,7 +56,7 @@ $(document).ready(function () {
                     let brewDataEL = $(`
                             <div>
                             <p>Name: ${data[i].name}</p><br>
-                            <p>Brewery Type: ${data[i].brewery_type}</p><br>
+                            <p>Brewery Type: ${data[i].brewery_type} </p><br>
                             <p>City: ${data[i].city}</p><br>
                             <p>Street Address: ${data[i].street}</p><br>
                             <p>Phone: ${data[i].phone}</p><br>
@@ -73,8 +75,9 @@ $(document).ready(function () {
 
         });
     })
+    
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.carousel');
         var instances = M.Carousel.init(elems, options);
     });
