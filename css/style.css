@@ -102,3 +102,15 @@
     left:16px;
     margin-top:50px;
   }
+
+/* Media Breakpoints */
+
+@media screen and (max-width: 640px) {
+  body {
+  
+    background-image: none !important;
+    background-color: black;
+  }
+  
+
+}
