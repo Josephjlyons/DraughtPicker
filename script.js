@@ -6,7 +6,7 @@ $(document).ready(function () {
     let searchBtn = $("#searchBtn");
     const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
     let favoriteArr = [];
-    favoriteArr.length = 5
+    // favoriteArr.length = 5
 
     if (localStorage.getItem("favoriteArr")) {
         cityArr = JSON.parse(localStorage.getItem('favoriteArr'))
@@ -89,16 +89,15 @@ $(document).ready(function () {
 
                     let brewDataEL = $(`
                             <div>
-                            <p>Name: ${data[i].name}</p> <br>
-                            <p>Brewery Type: ${type} </p><br>
-                            <p>City: ${city}</p><br>
-                            <p>Street Address: ${streetAdd}</p><br>
-                            <p>Phone: ${phone}</p><br>
-                            <p>Website: <a href="${data[i].website_url}"> ${webSite}</a></p><br>
-                           
-                            
+                                <p>Name: ${data[i].name}</p><br>
+                                <p>Brewery Type: ${type} </p><br>
+                                <p>City: ${city}</p><br>
+                                <p>Street Address: ${streetAdd}</p><br>
+                                <p>Phone: ${phone}</p><br>
+                                <p>Website: <a href="${data[i].website_url}"> ${webSite}</a></p><br>
+                                <button class="favoriteBtn" onclick="${saveFavorite(data[i])}">favorite</button><br>                            
                             </div>
-                            <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/mapNotAvailable.png" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
+                            <img class="map" src="${lat === null ?"./assets/mapNotAvailable.png" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                             `)
 
 
@@ -107,7 +106,7 @@ $(document).ready(function () {
                 }
             }
             function saveFavorite(res) {
-                let input = {Name: res.name, website:res.website_url}
+                let input = {Name: res.name, City:res.city ,website:res.website_url}
                 favoriteArr.push(input)
                 localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
             };
