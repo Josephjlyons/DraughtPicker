@@ -9,9 +9,10 @@
   h1 {
     font-family: 'Lobster','Pacifico', 'Rye', cursive;
     font-size:72px;
-    -webkit-text-stroke:1px #26A69A;;
+    -webkit-text-stroke:2px #26A69A;;
     -webkit-text-fill-color:black;
     margin-top: 50px;
+    border-bottom: 2px solid #26A69A;
   }
 
   /* Background Image */
@@ -27,6 +28,15 @@
     opacity: .5;
     width: 100%;
     height: 100%;
+  }
+
+  body{
+    /* background-color: #C39F6F; */
+    background-color: #EBE3D8;
+  }
+
+  footer {
+    background-color: #26A69A;
   }
 
    /* Carousel map Image */
@@ -57,7 +67,9 @@
 
   #searchBtn {
     height:40px;
-    font-size:18px
+    font-size:18px;
+    position: relative;
+    right: 12px;
   }
 
 /* Formatting for data element fields in Carousel */
@@ -90,6 +102,52 @@
 
   form{
     Position: relative;
-    left:16px;
-    margin-top:50px;
+    margin-top:40px;
   }
+
+  form > div {
+    position:relative;
+    top: -600px;
+    left: 40px;
+  }
+
+  figure {
+    height: 800px;
+    width: 100%;
+    /* margin-bottom: 25px; */
+    background-image: url("../assets/beerNBarley2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+    
+@media only screen and (max-width: 780px) {
+  #searchBtn {
+    right: 0px;
+    font-size: 14px;
+  }
+
+  form > div{
+    left:0px;
+  }
+
+  #search-bar{
+    left:10px;
+    font-size: 14px;
+  }
+} 
+@media only screen and (max-width: 650px) {
+  #searchBtn {
+    right: 0px;
+    font-size: 14px;
+  }
+
+  form > div{
+    left:0px;
+  }
+
+  #search-bar{
+    left:0px;
+    font-size: 14px;
+  }
+} 
