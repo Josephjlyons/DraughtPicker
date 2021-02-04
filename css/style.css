@@ -120,6 +120,25 @@
     background-position: center;
 }
 
+.footer{
+  background: #26A69A;
+}
+
+@media only screen and (max-width:991px){
+  body > main > div.pubList{
+    height: 100%;
+    display: flex;
+  }
+  
+  #myCarousel{
+    height: auto;
+  }
+  #myCarousel > div > div > img{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    
+}
     
 @media only screen and (max-width: 780px) {
   #searchBtn {
@@ -136,6 +155,14 @@
     font-size: 14px;
   }
 } 
+.footer{
+  background: #26A69A;
+}
+
+.footerh5{
+  text-decoration: underline;
+  /* text-align:right !important; */
+}
 
 
 /* Media Breakpoints */
@@ -143,6 +170,7 @@
   #searchBtn {
     right: 0px;
     font-size: 14px;
+    padding: 2px;
   }
 
   form > div{
@@ -150,7 +178,7 @@
   }
 
   #search-bar{
-    left:0px;
+    left:10px;
     font-size: 14px;
   }
   body {
@@ -172,4 +200,13 @@
   margin-top: 20px;
   
   }
+ 
+  
 } 
+@media only screen and (max-width: 600px){
+  #search-bar{
+    left:0px;
+
+}
+}
+}
