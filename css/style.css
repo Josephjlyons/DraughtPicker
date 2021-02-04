@@ -4,6 +4,8 @@
     box-sizing: border-box;
   }
 
+  /* Formatting for main page header */
+
   h1 {
     font-family: 'Lobster','Pacifico', 'Rye', cursive;
     font-size:72px;
@@ -12,11 +14,7 @@
     margin-top: 50px;
   }
 
-  test {
-    height: 100px;
-    width: 100px;
-    background-color: antiquewhite;
-  }
+  /* Background Image */
 
   img.background {
     position: absolute;
@@ -31,6 +29,8 @@
     height: 100%;
   }
 
+   /* Carousel map Image */
+
   img.map{
     position: absolute;
     top: 0px;
@@ -38,7 +38,8 @@
     height: 100%;
   }
   
-  
+  /* Search Bar Formatting */
+
   #search-bar {
     background-color: white;
     color:black;
@@ -49,13 +50,16 @@
     margin-right: 9px;
   }
 
-  
+  /*  Search Button Formatting */
+
   #searchBtn {
     /* padding-left:20px;
     padding-right: 20px; */
     height:40px;
     font-size:18px
   }
+
+/* Formatting for data element fields in Carousel */
 
   div.carousel-inner > div > div{
     padding-left: 40px;
@@ -64,13 +68,18 @@
     top:20px;
   }
 
+  /* Formatting for data fields inside Carousel */
+
   div.carousel-inner > div > div > p {
     font-size: 18px;
     font-weight:bold;
     -webkit-text-stroke:1px #26A69A;;
     -webkit-text-fill-color:black;
+    
   }
 
+/* Enter zip-code header under Search Bar */
+  
   h3 {
     color: black;
     font-size: 14px;
@@ -80,9 +89,13 @@
     font-weight: 600;
   }
 
+  /* Spacing from search bar to Carousel */
+
   div.pubList {
     margin-top:100px;
   }
+
+/* Form formatting that holds Search Button and Search Bar */
 
   form{
     Position: relative;
