@@ -14,7 +14,13 @@
     margin-top: 50px;
   }
 
+<<<<<<< HEAD
   /* Background Image */
+=======
+  .favoritebtn {
+    margin-left: 38%;
+  }
+>>>>>>> d55a0f5 (style for favoritebtn)
 
   img.background {
     position: absolute;
