@@ -8,18 +8,14 @@ $(document).ready(function () {
     let favoriteArr = [];
     favoriteArr.length = 5
 
-    // if (localStorage.getItem("favoriteArr")) {
-    //     cityArr = JSON.parse(localStorage.getItem('favoriteArr'))
-    // }
+    if (localStorage.getItem("favoriteArr")) {
+        cityArr = JSON.parse(localStorage.getItem('favoriteArr'))
+    }
 
-    // for (let i = 0; i < favoriteArr.length; i++) {
-    // }
+    for (let i = 0; i < favoriteArr.length; i++) {
+    }
 
-    // function saveCity(res) {
-    //     let input = {Name: res.name, website:res.website_url}
-    //     cityArr.push(input)
-    //     localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
-    // };
+
 
     // Search button that controls zip code fetch from OpenbreweryDB 
 
@@ -74,7 +70,7 @@ $(document).ready(function () {
                                 <p>Street Address: ${data[i].street}</p><br>
                                 <p>Phone: ${data[i].phone}</p><br>
                                 <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br>
-                                <button class="favoritebtn">favotire</buttons>
+                                <button class="favoritebtn" onclick="saveFavorite(${data})">favotire</buttons>
                             </div>
                             <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/brewery-picture.jpg" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                             `)
@@ -84,11 +80,20 @@ $(document).ready(function () {
                     $carouselInnerEl.append(divItemEL)
                 }
             }
+            function saveFavorite(res) {
+                let input = {Name: res.name, website:res.website_url}
+                favoriteArr.push(input)
+                localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
+            };
 
             populateCarousel(responseOne);
 
         });
     })
 
+<<<<<<< HEAD
     
 });
+=======
+})
+>>>>>>> 3149e3a (start of local storage)
