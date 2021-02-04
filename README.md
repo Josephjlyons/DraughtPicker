@@ -1,6 +1,5 @@
-# Road_To_Beer
+# Draught Picker
 
-Road To Beer! (working title...)
 
 ## Project Description
 A simple application that shows all the breweries within a users parameters (zip code)
@@ -31,12 +30,12 @@ MapQuest - API
 
 
 ### Task Breakdown/ Roles 
-Team Lead - Joe Lyons  
-MapQuest API - Wanda Gleason 
-OpenBrewery API - Joe Lyons
-HTML/CSS/Materialize - Tristan Laroche / Wanda Gleason
-Fomulas - Heath Bennett 
-Communication - Everyone
+* Team Lead - Joe Lyons  
+* MapQuest API - Wanda Gleason 
+* OpenBrewery API - Joe Lyons
+* HTML/CSS/Materialize - Tristan Laroche / Wanda Gleason
+* Fomulas - Heath Bennett 
+* Communication - Everyone
 
 ## Group Agreement
 
