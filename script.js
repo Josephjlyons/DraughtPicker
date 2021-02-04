@@ -5,6 +5,17 @@ $(document).ready(function () {
 
     let searchBtn = $("#searchBtn");
     const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
+    let favoriteArr = [];
+    favoriteArr.length = 5
+
+    if (localStorage.getItem("favoriteArr")) {
+        cityArr = JSON.parse(localStorage.getItem('favoriteArr'))
+    }
+
+    for (let i = 0; i < favoriteArr.length; i++) {
+    }
+
+
 
     // Search button that controls zip code fetch from OpenbreweryDB 
 
@@ -40,9 +51,7 @@ $(document).ready(function () {
             function populateCarousel(data) {
 
                 let $carouselInnerEl = $(".carousel-inner")
-                let $carouselindicatorsEL = $(".carousel-indicators")
 
-                $carouselindicatorsEL.empty();
                 $carouselInnerEl.empty();
                 // talk to long about this ugly thing
                 for (let i = 0; i < data.length; i++) {
@@ -52,33 +61,34 @@ $(document).ready(function () {
                     const street = responseOne[i].street;
                     sepAddress(street);
                     const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&defaultMarker=marker-26A69A&banner=${streetNumb}+${streetName}|26A69A`;
-                    let ilEL = $(`<li data-target="#myCarousel" data-slide-to="${i}" class="${i === 0 ? "active" : ""}"></li>`)
                     let divItemEL = $(`<div class="item ${i === 0 ? "active" : ""}"></div`)
                     let brewDataEL = $(`
                             <div>
-                            <p>Name: ${data[i].name}</p> <br>
-                            <p>Brewery Type: ${data[i].brewery_type} </p><br>
-                            <p>City: ${data[i].city}</p><br>
-                            <p>Street Address: ${data[i].street}</p><br>
-                            <p>Phone: ${data[i].phone}</p><br>
-                            <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br>
-                           
-                            
+                                <p>Name: ${data[i].name}</p><br>
+                                <p>Brewery Type: ${data[i].brewery_type}</p><br>
+                                <p>City: ${data[i].city}</p><br>
+                                <p>Street Address: ${data[i].street}</p><br>
+                                <p>Phone: ${data[i].phone}</p><br>
+                                <p>Website: <a href="${data[i].website_url}"> ${data[i].website_url}</a></p><br>
+                                <button class="favoritebtn" onclick="saveFavorite(${data})">favorite</buttons>
                             </div>
                             <img class="map" src="${lat === null ? /*this is just a place holder img need better one*/"./assets/brewery-picture.jpg" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                             `)
 
 
                     divItemEL.append(brewDataEL)
-                    $carouselindicatorsEL.append(ilEL)
                     $carouselInnerEl.append(divItemEL)
                 }
             }
+            function saveFavorite(res) {
+                let input = {Name: res.name, website:res.website_url}
+                favoriteArr.push(input)
+                localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
+            };
 
             populateCarousel(responseOne);
 
         });
     })
 
-    
-});
+})
