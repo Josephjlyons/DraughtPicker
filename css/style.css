@@ -43,7 +43,6 @@
   #search-bar {
     background-color: white;
     color:black;
-    /* padding:2px 2px 2px 20px; */
     height: 4rem;
     border-radius: 5px;
     text-align: center;
@@ -53,8 +52,6 @@
   /*  Search Button Formatting */
 
   #searchBtn {
-    /* padding-left:20px;
-    padding-right: 20px; */
     height:40px;
     font-size:18px
   }
@@ -78,16 +75,6 @@
     
   }
 
-/* Enter zip-code header under Search Bar */
-  
-  h3 {
-    color: black;
-    font-size: 14px;
-    position:relative;
-    left:322px;
-    top:-15px;
-    font-weight: 600;
-  }
 
   /* Spacing from search bar to Carousel */
 
