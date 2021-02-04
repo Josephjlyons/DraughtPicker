@@ -150,4 +150,34 @@
     left:0px;
     font-size: 14px;
   }
-} 
+/* Media Breakpoints */
+
+@media screen and (max-width: 640px) {
+  body {
+    min-height: 1000px;
+
+  background-color: tan;
+  }
+
+  .background{
+    display: none;
+  }
+  body > main > div.pubList{
+    height: 100%;
+    display: flex;
+  }
+
+  #myCarousel{
+    height: auto;
+  }
+
+  #myCarousel > div > div > img{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  
+
+
+
+  }
+}
