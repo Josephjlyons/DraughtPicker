@@ -49,6 +49,10 @@
     margin-right: 9px;
   }
 
+  div.favoriteBtn{
+    margin-left: 38%;
+  }
+
   /*  Search Button Formatting */
 
   #searchBtn {
