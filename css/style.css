@@ -107,10 +107,32 @@
 
 @media screen and (max-width: 640px) {
   body {
-  
-    background-image: none !important;
-    background-color: black;
+    min-height: 1000px;
+
+    background-image: url(../assets/brewery-picture-cell-phone.jpg);
+    background-repeat: no-repeat;
   }
+
+  .background{
+    display: none;
+  }
+  body > main > div.pubList{
+    height: 100%;
+    display: flex;
+  }
+
+  #myCarousel{
+    height: auto;
+  }
+
+  #myCarousel > div > div > img{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
   
 
+
+
+  }
 }
+
