@@ -120,18 +120,6 @@
     box-shadow: 4px 6px;
 }
 
-/* li{
-  display:inline;
-  margin:44px;
-  color:#EBE3D8;
-  background-color: black;
-  padding:10px;
-  border: 2px solid #26A69A;
-  border-radius: 15px;
-  position: relative;
-  top:60px;
-} */
-
 div.collapsible-header{
   background-color: black;
   border: 1px solid #26A69A;
@@ -228,7 +216,7 @@ button.favoriteBtn{
   }
   
   #myCarousel > div > div > img{
-  position: initial2;
+  position: initial;
   width: 100%;
   margin-top: 20px;
   
