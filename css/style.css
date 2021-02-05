@@ -30,7 +30,6 @@
     height: 100%;
   }
   
-  
   body{
     background-color: #EBE3D8;
   }
@@ -89,7 +88,6 @@
     -webkit-text-fill-color:black;
     
   }
-
 
   /* Spacing from search bar to Carousel */
 
@@ -167,7 +165,7 @@ button.favoriteBtn{
     height: auto;
   }
   #myCarousel > div > div > img{
-    position: relative;
+    position: initial;
     width: 100%;
     margin-top: 20px;
     
@@ -228,10 +226,9 @@ button.favoriteBtn{
   }
   
   #myCarousel > div > div > img{
-  position: relative;
+  position: initial;
   width: 100%;
   margin-top: 20px;
-  
   }
  
   
