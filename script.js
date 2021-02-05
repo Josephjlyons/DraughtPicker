@@ -27,8 +27,6 @@ $(document).ready(function () {
         favoritesListEl.append(favoriteListLiEL)
     }
 
-
-
     // Search button that controls zip code fetch from OpenbreweryDB 
 
     searchBtn.click(function () {
@@ -85,18 +83,13 @@ $(document).ready(function () {
                             </div>
                             <img class="map" src="${lat === null ? "./assets/mapNotAvailable.png" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                             `)
-
-
                     divItemEL.append(brewDataEL)
                     $carouselInnerEl.append(divItemEL)
                 }
             }
 
             $(".carousel-inner").on("click", ".active", function () {
-                
-
                 let favoriteArrLength = favoriteArr.length;
-
                 input =
                 {
                     Name: $(this).find(".name").text(),
