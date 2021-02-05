@@ -107,28 +107,12 @@ $(document).ready(function () {
 
             $(".carousel-inner").on("click", ".active", function () {
                 $(this).find(".brewData").each(function name(){
-                    let pName = $(this).text()
-                    // return pName
-                    console.log($(this).text())
+                    let input = $(this).text()
+                    console.log(input)
+                    favoriteArr.push(input)
+                    localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
                 });
-                // $(this).find("p.city").each(function(){
-                //     let pCity = $(this).text()
-                //     // return Pcity
-                //     console.log(pCity)
-                // });$(this).find("p.website").each(function(){
-                //     let pWebsite = $(this).text()
-                //     // return pWebsite
-                //     console.log(pWebsite)
-                // });
-                // console.log(pName)
-                // console.log(pCity)
-                // console.log(pWebsite)
             });
-            // function saveFavorite(res) {
-            //     let input = {Name: res.name, City:res.city ,website:res.website_url}
-            //     favoriteArr.push(input)
-            //     localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
-            // };
 
             populateCarousel(responseOne);
 
