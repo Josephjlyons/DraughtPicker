@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+    $('.collapsible').collapsible();
     // Variables For User Input 
 
     let searchBtn = $("#searchBtn");
@@ -60,7 +60,7 @@ $(document).ready(function () {
                     const long = responseOne[i].longitude;
                     const street = responseOne[i].street;
                     sepAddress(street);
-                    const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&defaultMarker=marker-26A69A&banner=${streetNumb}+${streetName}|26A69A`;
+                    const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&size=400,350&defaultMarker=marker-26A69A&banner=${streetNumb}+${streetName}|26A69A`;
                     let divItemEL = $(`<div class="item ${i === 0 ? "active" : ""}"></div`)
                     let city = data[i].city;
                     let streetAdd = data[i].street;
@@ -95,7 +95,7 @@ $(document).ready(function () {
                                 <p>Street Address: ${streetAdd}</p><br>
                                 <p>Phone: ${phone}</p><br>
                                 <p>Website: <a href="${data[i].website_url}"> ${webSite}</a></p><br>
-                                <button class="favoriteBtn" onclick="${saveFavorite(data[i])}">favorite</button><br>                            
+                                <button class="favoriteBtn" onclick="${saveFavorite(data[i])}">Save to Favorites</button><br>                            
                             </div>
                             <img class="map" src="${lat === null ?"./assets/mapNotAvailable.png" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                             `)
