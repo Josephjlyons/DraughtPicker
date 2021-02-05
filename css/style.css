@@ -31,11 +31,10 @@
   }
 
   body{
-    /* background-color: #C39F6F; */
     background-color: #EBE3D8;
   }
 
-  footer {
+  .footer {
     background-color: #26A69A;
   }
 
@@ -98,7 +97,7 @@
     margin-top:100px;
   }
 
-/* Form formatting that holds Search Button and Search Bar */
+/* Form formatting that holds Search Button and Search Bar and Image */
 
   form{
     Position: relative;
@@ -114,15 +113,14 @@
   figure {
     height: 800px;
     width: 100%;
-    /* margin-bottom: 25px; */
     background-image: url("../assets/beerNBarley2.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.footer{
-  background: #26A69A;
-}
+
+
+/* Media Breakpoints */
 
 @media only screen and (max-width:991px){
   body > main > div.pubList{
@@ -161,11 +159,11 @@
 
 .footerh5{
   text-decoration: underline;
-  /* text-align:right !important; */
+  
 }
 
 
-/* Media Breakpoints */
+
 @media only screen and (max-width: 650px) {
   #searchBtn {
     right: 0px;
