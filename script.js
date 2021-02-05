@@ -78,7 +78,6 @@ $(document).ready(function () {
                         phone = "Information was not provided.";
                     }
                     else{
-                        console.log(phone);
                         phone = [phone.slice(0, 3) + "-" + phone.slice(3, 6) + "-" + phone.slice(6)].join('');
                     }
                     if (webSite === "" || webSite === "null"){
@@ -88,14 +87,14 @@ $(document).ready(function () {
                     type = type.charAt(0).toUpperCase() + type.slice(1);
 
                     let brewDataEL = $(`
-                            <div>
-                                <p>Name: ${data[i].name}</p><br>
-                                <p>Brewery Type: ${type} </p><br>
-                                <p>City: ${city}</p><br>
-                                <p>Street Address: ${streetAdd}</p><br>
-                                <p>Phone: ${phone}</p><br>
-                                <p>Website: <a href="${data[i].website_url}"> ${webSite}</a></p><br>
-                                <button class="favoriteBtn" onclick="${saveFavorite(data[i])}">Save to Favorites</button><br>                            
+                            <div class="brewData">
+                                <p class="name">Name: ${data[i].name}</p><br>
+                                <p class="brewType">Brewery Type: ${type} </p><br>
+                                <p class="city">City: ${city}</p><br>
+                                <p class="StreetAdd">Street Address: ${streetAdd}</p><br>
+                                <p class="phone">Phone: ${phone}</p><br>
+                                <p class="website">Website: <a href="${data[i].website_url}"> ${webSite}</a></p><br>
+                                <button class="favoriteBtn">Save To Favorites</button><br>                            
                             </div>
                             <img class="map" src="${lat === null ?"./assets/mapNotAvailable.png" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                             `)
@@ -105,11 +104,15 @@ $(document).ready(function () {
                     $carouselInnerEl.append(divItemEL)
                 }
             }
-            function saveFavorite(res) {
-                let input = {Name: res.name, City:res.city ,website:res.website_url}
-                favoriteArr.push(input)
-                localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
-            };
+
+            $(".carousel-inner").on("click", ".active", function () {
+                $(this).find(".brewData").each(function name(){
+                    let input = $(this).text()
+                    console.log(input)
+                    favoriteArr.push(input)
+                    localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
+                });
+            });
 
             populateCarousel(responseOne);
 
