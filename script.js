@@ -99,7 +99,7 @@ $(document).ready(function () {
 
                     let brewDataEL = $(`
                             <div class="brewData">
-                                <p class="name">Name: ${data[i].name}</p><br>
+                                <p>Name: <i class="name">${data[i].name}</i></p><br>
                                 <p class="brewType">Brewery Type: ${type} </p><br>
                                 <p class="city">City: ${city}</p><br>
                                 <p class="StreetAdd">Street Address: ${streetAdd}</p><br>
