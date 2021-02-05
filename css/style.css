@@ -61,13 +61,7 @@
     text-align: center;
     margin-right: 9px;
   }
-
-  .favoriteBtn{
-    margin-left: 38%;
-  }
-
   
-
   /*  Search Button Formatting */
 
   #searchBtn {
@@ -150,11 +144,9 @@ button.favoriteBtn{
   padding:5px;
   color:#EBE3D8;
   position: relative;
-  left:-350px;
+  margin-left: 12%;
   top:-15px;
 }
-
-
 
 
 /* Media Breakpoints */
