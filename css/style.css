@@ -138,6 +138,12 @@
   top:60px;
 } */
 
+div.collapsible-header{
+  background-color: black;
+  border: 1px solid #26A69A;
+  color:#EBE3D8;
+}
+
 button.favoriteBtn:hover {
   background-color: #26A69A;
   border:2px solid black;
