@@ -17,11 +17,11 @@ $(document).ready(function () {
         <li>
             <div class="collapsible-header"><i class="material-icons"><span class="fas fa-beer"></span></i>${favoriteArr[i].Name}</div>
             <div class="collapsible-body">
-                <span>${favoriteArr[i].brewType}</span><br>
-                <span>${favoriteArr[i].city}</span><br>
-                <span>${favoriteArr[i].StreetAdd}</span><br>
-                <span>${favoriteArr[i].phone}</span><br>
-                <span>${favoriteArr[i].website}</span>
+                <p>${favoriteArr[i].brewType}</p><br>
+                <p>${favoriteArr[i].city}</p><br>
+                <p>${favoriteArr[i].StreetAdd}</p><br>
+                <p>${favoriteArr[i].phone}</p><br>
+                <p>${favoriteArr[i].website}</p>
             </div>
         </li>`)
         favoritesListEl.append(favoriteListLiEL)
@@ -146,11 +146,11 @@ $(document).ready(function () {
                     <li>
                         <div class="collapsible-header"><i class="material-icons"><span class="fas fa-beer"></span></i>${favoriteArr[i].Name}</div>
                         <div class="collapsible-body">
-                            <span>${favoriteArr[i].brewType}</span><br>
-                            <span>${favoriteArr[i].city}</span><br>
-                            <span>${favoriteArr[i].StreetAdd}</span><br>
-                            <span>${favoriteArr[i].phone}</span><br>
-                            <span>${favoriteArr[i].website}</span>
+                            <p>${favoriteArr[i].brewType}</p><br>
+                            <p>${favoriteArr[i].city}</p><br>
+                            <p>${favoriteArr[i].StreetAdd}</p><br>
+                            <p>${favoriteArr[i].phone}</p><br>
+                            <p>${favoriteArr[i].website}</p>
                         </div>
                     </li>`)
                     favoritesListEl.append(favoriteListLiEL)
