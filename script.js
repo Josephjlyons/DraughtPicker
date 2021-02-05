@@ -94,7 +94,7 @@ $(document).ready(function () {
                                 <p class="StreetAdd">Street Address: ${streetAdd}</p><br>
                                 <p class="phone">Phone: ${phone}</p><br>
                                 <p class="website">Website: <a href="${data[i].website_url}"> ${webSite}</a></p><br>
-                                <button class="favoriteBtn">favorite</button><br>                            
+                                <button class="favoriteBtn">Save To Favorites</button><br>                            
                             </div>
                             <img class="map" src="${lat === null ?"./assets/mapNotAvailable.png" : mapQuest}" alt="This is a map of ${data[i].name} location"><br><br><br>
                             `)
