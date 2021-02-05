@@ -167,7 +167,7 @@ button.favoriteBtn{
     height: auto;
   }
   #myCarousel > div > div > img{
-    position: relative;
+    position: initial;
     width: 100%;
     margin-top: 20px;
     
@@ -228,7 +228,7 @@ button.favoriteBtn{
   }
   
   #myCarousel > div > div > img{
-  position: relative;
+  position: initial2;
   width: 100%;
   margin-top: 20px;
   

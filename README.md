@@ -1,76 +1,71 @@
-# Road_To_Beer
+# The Draught Picker
 
-Road To Beer! (working title...)
 
 ## Project Description
-A simple application that shows all the breweries within a users parameters (zip code)
+
+This site allows the user to enter a zip code and receive the name, address, phone number, URL, and type of all the breweries that are local to the zip code.  The user is give the option save up to five locations to their favorites.
+
+[Link to GitHub repository](https://github.com/Josephjlyons/DraughtPicker)
+
+[Link to deployed page](https://heath-bennett.github.io/weatherDashboard/)
+
+## Table of Contents
+
+* [Image of Index.html](#Image-of-Index.html)
+* [Search Bar](#Search-Bar)
+* [Brewery Information](#Brewery-Information)
+* [Favorites](#Favorites)
+* [Colors Used](#Colors-Used)
+* [Collaborators](#Collaborators)
+
+## Image of Index.html
+
+![Screenshot of Website](./assets/websiteImage.png)
+
+## Search Bar
+
+Here the user enters the zip code for the city they wish to drink in.  Upon hitting the search button, the carousel is populated with a map of the location and pertinent information.
+
+![Image of Search Bar](./assets/searchBar.png)
 
 
-## User Story
-When the user enters a zip code.
-Then the user is returned with a list of breweries in the area.
-When the user chooses a brewery from the list.
-Then a map is displayed. 
-When the user favorites a brewery.
-Then the brewery is stored. 
+## Brewery Information
+
+Brewery Information provides the user with the name, type, city, state, street, phone, map, and URL of the breweries local to the zip code provided.  Each location automatically scrolls by until the user hovers over it.  There are also arrow buttons that cycle through each location. 
 
 
-### WireFrame
-Single page application that displays an input box for zip code user entry.
-A cooresponding map that shows the location of breweries in the given parameters. 
-A favorited brewery section that displays the users favorites. 
-Section that shows the breweries information (name, type, website, address, phone-number).
+![Brewery Information](./assets/breweryInfo.png)
+
+## Favorites
+
+Located in the Brewery Information area is a button to set the current location to favorites.  The user is allowed to save up to five locations. 
+
+![Save to Favorites Button](./assets/saveToFavorites.png)
+
+![FavoriteMenu](./assets/favoriteMenu.png)
+
+## Colors Used in the Project
+
+background and fonts: #EBE3D8
+buttons and borders: #26A69A
+buttons and borders: #000000
+borders:#5B3913
+
+![Colors Used](./assets/colorsUsed.png)
+
+## Collaborators
+
+[Joseph Lyons](https://github.com/Josephjlyons)
+
+[Tristan LaRoche](https://github.com/taroche)
+
+[Heath Bennett](https://github.com/Heath-Bennett)
+
+[Wanda Gleason](https://github.com/wmgleason)
 
 
 
 
-### APIs used
-OpenBreweryDB - API
-MapQuest - API
 
 
-
-### Task Breakdown/ Roles 
-Team Lead - Joe Lyons  
-MapQuest API - Wanda Gleason 
-OpenBrewery API - Joe Lyons
-HTML/CSS/Materialize - Tristan Laroche / Wanda Gleason
-Fomulas - Heath Bennett 
-Communication - Everyone
-
-## Group Agreement
-
-
-### What role(s) will everyone on the team hold?
-
-See above.
-
-### How often will you have meetings?
-
-Once daily 2pm. 
-Unless class day or discussed otherwise.
-
-
-### How will you keep track of tasks?
-
-Trello and group check ins.
-
-### What if someone misses a deadline?
-
-Group works together to meet deadline
-
-### What happens if someone misses a meeting?  
-
-Expected to catch up via slack or trello.
-
-
-#### What is their responsibility? The team’s responsibility?
-
-To finish the project by working as a group. 
-
-
-### How does each team member like to receive feedback?
-
-
-### What if there is friction between members? How will you address it?
 
