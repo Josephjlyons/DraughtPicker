@@ -89,14 +89,7 @@ $(document).ready(function () {
             }
 
             $(".carousel-inner").on("click", ".active", function () {
-<<<<<<< HEAD
                 let favoriteArrLength = favoriteArr.length;
-=======
-                
-
-                let favoriteArrLength = favoriteArr.length;
-
->>>>>>> 6f698f85d92890edbd399e5becc6fa51283f4b51
                 input =
                 {
                     Name: $(this).find(".name").text(),
