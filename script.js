@@ -12,6 +12,20 @@ $(document).ready(function () {
         favoriteArr = JSON.parse(localStorage.getItem('favoriteArr'))
     }
 
+    for (let i = 0; i < favoriteArr.length; i++) {
+        let favoriteListLiEL = $(`
+        <li>
+            <div class="collapsible-header"><i class="material-icons"><span class="fas fa-beer"></span></i>${favoriteArr[i].Name}</div>
+            <div class="collapsible-body">
+                <span>${favoriteArr[i].brewType}</span><br>
+                <span>${favoriteArr[i].city}</span><br>
+                <span>${favoriteArr[i].StreetAdd}</span><br>
+                <span>${favoriteArr[i].phone}</span><br>
+                <span>${favoriteArr[i].website}</span>
+            </div>
+        </li>`)
+        favoritesListEl.append(favoriteListLiEL)
+    }
 
 
 
@@ -116,7 +130,7 @@ $(document).ready(function () {
                     phone: $(this).find(".phone").text(),
                     website: $(this).find(".website").text(),
                 }
-                for(j=0; j<favoriteArr.length; j++){
+                for(j=0; j<favoriteArrLength; j++){
                     if(favoriteArr[j].Name == input.Name ){
                         console.log("already in array")
                         return 0;
@@ -127,7 +141,7 @@ $(document).ready(function () {
                 }
                 favoriteArr.push(input)
                 favoritesListEl.empty();
-                for (let i = 0; i < favoriteArr.length; i++) {
+                for (let i = 0; i < favoriteArrLength; i++) {
                     let favoriteListLiEL = $(`
                     <li>
                         <div class="collapsible-header"><i class="material-icons"><span class="fas fa-beer"></span></i>${favoriteArr[i].Name}</div>
