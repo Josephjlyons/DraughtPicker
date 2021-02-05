@@ -34,10 +34,12 @@
     background-color: #26A69A;
   }
   body{
-    /* background-color: #C39F6F; */
     background-color: #EBE3D8;
   }
 
+  .footer {
+    background-color: #26A69A;
+  }
 
    /* Carousel map Image */
 
@@ -102,7 +104,7 @@
     margin-top:100px;
   }
 
-/* Form formatting that holds Search Button and Search Bar */
+/* Form formatting that holds Search Button and Search Bar and Image */
 
   form{
     Position: relative;
@@ -118,7 +120,6 @@
   figure {
     height: 800px;
     width: 100%;
-    /* margin-bottom: 25px; */
     background-image: url("../assets/beerNBarley2.jpg");
     background-size: cover;
     background-position: center;
@@ -155,6 +156,26 @@ button.favoriteBtn{
 }
 
 
+
+
+/* Media Breakpoints */
+
+@media only screen and (max-width:991px){
+  body > main > div.pubList{
+    height: 100%;
+    display: flex;
+  }
+  
+  #myCarousel{
+    height: auto;
+  }
+  #myCarousel > div > div > img{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+    
 @media only screen and (max-width: 780px) {
   #searchBtn {
     right: 0px;
@@ -170,13 +191,22 @@ button.favoriteBtn{
     font-size: 14px;
   }
 } 
+.footer{
+  background: #26A69A;
+}
+
+.footerh5{
+  text-decoration: underline;
+  
+}
 
 
-/* Media Breakpoints */
+
 @media only screen and (max-width: 650px) {
   #searchBtn {
     right: 0px;
     font-size: 14px;
+    padding: 2px;
   }
 
   form > div{
@@ -184,7 +214,7 @@ button.favoriteBtn{
   }
 
   #search-bar{
-    left:0px;
+    left:10px;
     font-size: 14px;
   }
   body {
@@ -206,4 +236,13 @@ button.favoriteBtn{
   margin-top: 20px;
   
   }
+ 
+  
 } 
+@media only screen and (max-width: 600px){
+  #search-bar{
+    left:0px;
+
+}
+}
+}
