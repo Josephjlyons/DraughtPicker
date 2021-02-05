@@ -73,39 +73,13 @@ $(document).ready(function () {
                     sepAddress(street);
                     const mapQuest = `https://www.mapquestapi.com/staticmap/v5/map?locations=${lat},${long},${state}&key=${mapQKey}&zoom=16&size=400,350&defaultMarker=marker-26A69A&banner=${streetNumb}+${streetName}|26A69A`;
                     let divItemEL = $(`<div class="item ${i === 0 ? "active" : ""}"></div`)
-                    
-                    
-                    // let city = data[i].city;
-                    // let streetAdd = data[i].street;
-                    // let phone = data[i].phone;
-                    // let webSite = data[i].website_url;
-                    // let type = data[i].brewery_type;
-
-                    // if (city === "" || city === "null") {
-                    //     city = "Information was not provided.";
-                    // }
-                    // if (streetAdd === "" || streetAdd === "null") {
-                    //     streetAdd = "Information was not provided.";
-                    // }
-                    // if (phone === "" || phone === "null") {
-                    //     phone = "Information was not provided.";
-                    // }
-                    // else {
-                    //     phone = [phone.slice(0, 3) + "-" + phone.slice(3, 6) + "-" + phone.slice(6)].join('');
-                    // }
-                    // if (webSite === "" || webSite === null) {
-                    //     webSite = "Information was not provided.";
-                    // }
-
-                    // type = type.charAt(0).toUpperCase() + type.slice(1);
-
                     let brewDataEL = $(`
                             <div class="brewData">
                                 <p>Name: <i class="name">${data[i].name}</i></p><br>
                                 <p class="brewType">Brewery Type: ${data[i].brewery_type.charAt(0).toUpperCase() + data[i].brewery_type.slice(1)} </p><br>
                                 <p class="city">City: ${data[i].city === "" ? "Information was not provided." : data[i].city}</p><br>
                                 <p class="StreetAdd">Street Address: ${data[i].street === "" ? "Information was not provided." : data[i].street}</p><br>
-                                <p class="phone">Phone: ${data[i].phone === "" ? "Information was not provided." : data[i].phone}</p><br>
+                                <p class="phone">Phone: ${data[i].phone === "" ? "Information was not provided." : [data[i].phone.slice(0, 3) + "-" + data[i].phone.slice(3, 6) + "-" + data[i].phone.slice(6)].join('')}</p><br>
                                 <p class="website">Website: ${data[i].website_url === "" ? "Information was not provided." : "<a href=" + data[i].website_url + ">" + data[i].website_url + "</a>"}</p><br>
                                 <button class="favoriteBtn">Save To Favorites</button><br>                            
                             </div>
