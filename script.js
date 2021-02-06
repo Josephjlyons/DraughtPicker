@@ -3,9 +3,9 @@ $(document).ready(function () {
     $('.collapsible').collapsible();
     // Variables For User Input 
 
-    let searchBtn = $("#searchBtn");
+    const searchBtn = $("#searchBtn");
     const mapQKey = "tm9ssbyvHrxMSsgIhCIymXmOzGvEGYZr"
-    const favoritesListEl = $(".favoritesList")
+    const favoritesListEl = $("#favoritesList")
     let favoriteArr = [];
 
     //Get favorites from local storage
@@ -26,6 +26,14 @@ $(document).ready(function () {
             </div>
         </li>`)
         favoritesListEl.append(favoriteListLiEL)
+    }
+    function removeFavorite() {
+        favoriteArr.shift()
+        let remove = document.getElementById("favoritesList");
+        remove.removeChild(remove.firstChild);
+    }
+    if (favoriteArr.length >= 4) {
+        removeFavorite()
     }
 
     // Search button that controls zip code fetch from OpenbreweryDB 
@@ -74,7 +82,7 @@ $(document).ready(function () {
                     let divItemEL = $(`<div class="item ${i === 0 ? "active" : ""}"></div`)
                     let brewDataEL = $(`
                             <div class="brewData">
-                                <p>Name: <i class="name">${data[i].name}</i></p><br>
+                                <p>Name: <span class="name">${data[i].name}</span></p><br>
                                 <p class="brewType">Brewery Type: ${data[i].brewery_type.charAt(0).toUpperCase() + data[i].brewery_type.slice(1)} </p><br>
                                 <p class="city">City: ${data[i].city === "" ? "Information was not provided." : data[i].city}</p><br>
                                 <p class="StreetAdd">Street Address: ${data[i].street === "" ? "Information was not provided." : data[i].street}</p><br>
@@ -90,8 +98,8 @@ $(document).ready(function () {
             }
             //Sets local storage
             $(".carousel-inner").on("click", ".active", function () {
-                let favoriteArrLength = favoriteArr.length;
-                input =
+
+                let input =
                 {
                     Name: $(this).find(".name").text(),
                     brewType: $(this).find(".brewType").text(),
@@ -100,32 +108,31 @@ $(document).ready(function () {
                     phone: $(this).find(".phone").text(),
                     website: $(this).find(".website").text(),
                 }
-                for(j=0; j<favoriteArrLength; j++){
-                    if(favoriteArr[j].Name == input.Name ){
+                for (j = 0; j < favoriteArr.length; j++) {
+                    if (favoriteArr[j].Name == input.Name) {
                         console.log("already in array")
                         return 0;
                     }
-                }
-                if (favoriteArrLength > 4) {
-                    favoriteArr.splice(0, favoriteArrLength - 4);
-                }
+                };
+                let favoriteListLiEL = $(`
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons"><span class="fas fa-beer"></span></i>${input.Name}</div>
+                            <div class="collapsible-body">
+                                <p>${input.brewType}</p><br>
+                                <p>${input.city}</p><br>
+                                <p>${input.StreetAdd}</p><br>
+                                <p>${input.phone}</p><br>
+                                <p><a href="${input.website}">${input.website}</a></p>
+                            </div>
+                        </li>`)
+                favoritesListEl.append(favoriteListLiEL)
                 favoriteArr.push(input)
-                favoritesListEl.empty();
-                for (let i = 0; i < favoriteArrLength; i++) {
-                    let favoriteListLiEL = $(`
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons"><span class="fas fa-beer"></span></i>${favoriteArr[i].Name}</div>
-                        <div class="collapsible-body">
-                            <p>${favoriteArr[i].brewType}</p><br>
-                            <p>${favoriteArr[i].city}</p><br>
-                            <p>${favoriteArr[i].StreetAdd}</p><br>
-                            <p>${favoriteArr[i].phone}</p><br>
-                            <p><a href="${favoriteArr[i].website}">${favoriteArr[i].website}</a></p>
-                        </div>
-                    </li>`)
-                    favoritesListEl.append(favoriteListLiEL)
-                }
                 localStorage.setItem("favoriteArr", JSON.stringify(favoriteArr))
+                if (favoriteArr.length >= 5) {
+                    removeFavorite()
+                }
+                console.log(favoriteArr)
+
             });
 
             populateCarousel(responseOne);
