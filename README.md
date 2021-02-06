@@ -9,7 +9,7 @@ This site allows the user to enter a zip code and receive the name, address, pho
 
 [Link to GitHub repository](https://github.com/Josephjlyons/DraughtPicker)
 
-[Link to deployed page](https://heath-bennett.github.io/weatherDashboard/)
+[Link to deployed page](https://josephjlyons.github.io/DraughtPicker/)
 
 &nbsp;
 

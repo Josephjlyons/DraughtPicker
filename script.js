@@ -8,6 +8,7 @@ $(document).ready(function () {
     const favoritesListEl = $(".favoritesList")
     let favoriteArr = [];
 
+    //Get favorites from local storage
     if (localStorage.getItem("favoriteArr")) {
         favoriteArr = JSON.parse(localStorage.getItem('favoriteArr'))
     }
@@ -87,7 +88,7 @@ $(document).ready(function () {
                     $carouselInnerEl.append(divItemEL)
                 }
             }
-
+            //Sets local storage
             $(".carousel-inner").on("click", ".active", function () {
                 let favoriteArrLength = favoriteArr.length;
                 input =
