@@ -22,6 +22,7 @@ This site allows the user to enter a zip code and receive the name, address, pho
 * [Colors Used](#Colors-Used)
 * [Resources Used](#Resources-Used)
 * [Collaborators](#Collaborators)
+* [License](#License)
 
 &nbsp;
 
@@ -30,6 +31,8 @@ This site allows the user to enter a zip code and receive the name, address, pho
 &nbsp;
 
 ![Screenshot of Website](./assets/websiteImage.png)
+
+[Table of Contents](#Table-of-Contents)
 
 &nbsp;
 
@@ -41,6 +44,8 @@ Here the user enters the zip code for the city they wish to drink in.  Upon hitt
 
 ![Image of Search Bar](./assets/searchBar.png)
 
+[Table of Contents](#Table-of-Contents)
+
 &nbsp;
 
 
@@ -51,6 +56,8 @@ Brewery Information provides the user with the name, type, city, state, street, 
 &nbsp;
 
 ![Brewery Information](./assets/breweryInfo.png)
+
+[Table of Contents](#Table-of-Contents)
 
 &nbsp;
 
@@ -66,9 +73,11 @@ Located in the Brewery Information area is a button to set the current location 
 
 ![FavoriteMenu](./assets/favoriteMenu.png)
 
+[Table of Contents](#Table-of-Contents)
+
 &nbsp;
 
-## Colors Used in the Project
+## Colors Used
 
 background and fonts: #EBE3D8  
 buttons and borders: #26A69A  
@@ -78,6 +87,8 @@ borders:#5B3913
 &nbsp;
 
 ![Colors Used](./assets/colorsUsed.png)
+
+[Table of Contents](#Table-of-Contents)
 
 &nbsp;
 
@@ -97,6 +108,9 @@ borders:#5B3913
 
 [Adobe Color ](https://color.adobe.com/create/image)
 
+&nbsp;
+
+[Table of Contents](#Table-of-Contents)
 
 
 &nbsp;
@@ -111,6 +125,40 @@ borders:#5B3913
 [Heath Bennett](https://github.com/Heath-Bennett)
 
 [Wanda Gleason](https://github.com/wmgleason)
+
+&nbsp;
+
+[Table of Contents](#Table-of-Contents)
+
+&nbsp;
+
+## License
+
+&nbsp;
+
+MIT License
+
+Copyright (c) [2021] [Joseph Lyons, Tristan LaRoche, Heath Bennett, and Wanda Gleason]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+[Table of Contents](#Table-of-Contents)
 
 
 
